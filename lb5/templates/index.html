@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head><title>Курсы валют</title></head>
+<body>
+    <h1>Курсы валют</h1>
+    <table border="1">
+        <tr><th>Валюта</th><th>Курс</th><th>Дата</th></tr>
+        {% for r in rates %}
+            <tr><td>{{ r.id }}</td><td>{{ r.value }}</td><td>{{ r.datetime }}</td></tr>
+        {% endfor %}
+    </table>
+    <a href="/update">Изменить отслеживаемые валюты</a>
+</body>
+</html>
